@@ -124,7 +124,18 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
+# If you're using local static files during development
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # Adjust this path according to your project structure
+]
+
+LOGIN_URL='/accounts/login'
+
+LOGIN_REDIRECT_URL='/tweet/'
+LOGOUT_REDIRECT_URL='/tweet/'
+
+
+
